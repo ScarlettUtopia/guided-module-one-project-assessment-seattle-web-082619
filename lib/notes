@@ -1,0 +1,150 @@
+Welcome to the Insectarium! What is your name?
+
+If the username already exists 
+Welcome back _____ 
+
+else Welcome to Insectarium!  
+Would you like to create a profile or continue as a guest?
+
+Option 1 
+create username and password
+
+Option 2 
+continue as guest
+
+NEXT STEP
+
+What would you like to do?
+
+1. Add an insect to the Insectatium 
+2. Identify an insect
+
+Please Select an option...
+
+leg_count
+1. six legs
+2. eight legs
+3. other
+
+main_color
+1. Black
+2. Blue
+3. Brown
+4. Copper
+5. Gold
+6. Gray
+7. Green
+8. Ivory
+9. Orange
+10. Pink
+11. Purple
+12. Red
+13. Tan
+14. Yellow
+15. White
+
+accent_color
+1. Black
+2. Blue
+3. Brown
+4. Copper
+5. Gold
+6. Gray
+7. Green
+8. Ivory
+9. Orange
+10. Pink
+11. Purple
+12. Red
+13. Tan
+14. Yellow
+15. White
+
+category
+1. Alderfly or Dobsonfly
+2. Antlion or Lacewing
+3. Bee, Ant, Wasp, or Similar
+4. Beetle
+5. Bristletail
+6. Butterfly or Moth
+7. Caddisfly
+8. Centipede
+9. Chewing Lice
+10. Cicada or Similar
+11. Cockroach
+12. Crustacean
+13. Daddy-Long-Leg
+14. Dragonfly or Damselfly
+15. Earwig
+16. Flea
+17. Fly or Mosquito
+18. Grasshopper or Cricket
+19. Mayfly
+20. Mantid
+21. Millipede
+22. Mite or Tick
+23. Net-Veined Winged Bug
+24. Proturan
+25. Pseudoscorpion
+26. Scorpion
+27. Scorpionfly or Similar
+28. Snakefly
+29. Spider
+30. Springtail
+31. Stonefly
+32. Sucking Lice
+33. Tailless Whipscorpion
+34. Termite
+35. Thrip
+36. True Bug
+37. Walkingstick or Timema
+38. Windscorpion
+39. Whipscorion
+40. Unknown
+
+
+wings?
+
+
+if adding...
+name?
+
+You have found a _____!
+
+If user profile exists
+Would you like to save this insect to your personal Insectarium?
+1. Y or Yes
+2. N or No 
+
+
+This insect does not yet exist in Insectarium.
+You may have found an alien! 8P
+Would you like to add this creature to the Insectarium?
+1. Y or Yes
+2. N or No
+
+If user is adding a new insect to the Insectarium
+
+If insect already exists
+This insect already exists in Insectarium.  
+Please find another crawly critter and try again.
+
+else
+Thank you for adding a new creature/insect to the Insectarium!
+Would you like to save this insect added to your personal Insectarium?
+
+1. Y or Yes
+2. N or No
+
+if option 1
+"This insect has now been added to your personal Insectarium!"
+
+Would you like to
+
+1. Add an(another) Insect
+2. Identify an(another) insect
+3. Exit
+
+if option 3 
+
+"Thank you for visiting the Insectarium, please visit us again soon!"
