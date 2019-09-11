@@ -5,7 +5,7 @@ class Insectarium
         puts "Welcom To The Insectarium!  What is your name?"
         username = STDIN.gets.chomp
 
-        if Users.exists?(username) == true
+        if User.exists?(username) == true
             puts "Welcome back #{username}!"
             self.second_menu
         else
@@ -16,10 +16,10 @@ class Insectarium
         while is_running
             self.main_menu
             option = STDIN.gets.chomp
-            if option is == "1"
+            if option == "1"
                 self.create_new_user
-            elsif option is == "2" || option == self.second_menu
-            elsif option is == "3" 
+            elsif option == "2" || option == self.second_menu
+            elsif option == "3" 
                 is_running = false
             end
 
@@ -50,10 +50,13 @@ class Insectarium
         puts "3. Exit"
     end
 
-    def create_new_user
+    def self.create_new_user
+        puts "Creating a new account. What's your username?"
+        username = STDIN.gets.chomp
+        User.create(username: username)
     end
 
-    def add_new_insect(leg_count, main_color, accent_color, name)
+    def self.add_new_insect(leg_count, main_color, accent_color, name)
         if Insetcs.exists?(name) == true
             puts "This insect already exists in the Insectarium.  
             Please find another crawly critter and try again."
@@ -61,7 +64,7 @@ class Insectarium
         end
     end
 
-    def identify_insect(leg_count, main_color, accent_color)
+    def self.identify_insect(leg_count, main_color, accent_color)
     end
 
 end
