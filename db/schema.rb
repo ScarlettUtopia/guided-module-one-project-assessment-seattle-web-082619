@@ -10,13 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_11_213706) do
+ActiveRecord::Schema.define(version: 2019_09_13_163227) do
 
   create_table "insects", force: :cascade do |t|
     t.string "name"
     t.string "main_color"
     t.string "accent_color"
     t.integer "leg_count"
+    t.string "link"
   end
 
   create_table "users", force: :cascade do |t|

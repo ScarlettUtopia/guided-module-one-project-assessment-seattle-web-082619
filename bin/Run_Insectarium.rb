@@ -3,7 +3,7 @@ class Insectarium
 
     def self.run
         
-            puts "Welcom To The Insectarium!  What is your name?"
+            puts "Welcome To The Insectarium!  What is your name?"
             username = STDIN.gets.chomp
 
            if found = User.exists?(username: username)
@@ -69,12 +69,11 @@ class Insectarium
         if found = Insect.exists?(name: name)
             puts "That insect already exists in the Insectarium.
             Please find another crawly critter and try again. :)"
-            # self.insect_menu
        else
             Insect.create(name: name, main_color: main_color, accent_color: accent_color, leg_count: leg_count)
             puts "We've added a new #{name} to the Insectarium!
-            Thank you for your contribution to our crawly critters collection!"
-            # self.insect_menu
+            Thank you for your contribution to our crawly critters collection!
+            NOW..."
        end
     end
 
@@ -82,22 +81,27 @@ class Insectarium
     def self.identify_insect
         puts "Please enter the following identifiers...
         main color, accent color, leg count"
-        main_color, accent_color, leg_count = STDIN.gets.chomp.split(",")
-        if found = Insect.exists?(main_color: main_color, accent_color: accent_color, leg_count: leg_count)
-        
+        main_color, accent_color, leg_count = STDIN.gets.chomp.split(", ")
+        found = Insect.where(main_color: main_color, accent_color: accent_color, leg_count: leg_count)
+        if found.length > 0
+            puts "You may have found the following insect(s)! 
+            Check the link(s) to see which insect you've found."
+            found.each do |i|
+                puts i.link
+            end
         else 
-            puts "This insect does not yet exist in Insectarium.
+            puts "This insect does not yet exist in the Insectarium.
             You may have found an alien! 8P
             Would you like to add this creature to the Insectarium?
             1. Yes
             2. No"
         end
-
-        if option == "1"
-            self.add_new_insect
-        elsif option == "2"
-            self.insect_menu
-        end
+            option = STDIN.gets.chomp
+            if option == "1"
+                self.add_new_insect
+            elsif option == "2"
+                # self.insect_menu
+            end
     end
 
 
